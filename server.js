@@ -36,7 +36,7 @@ app.use(cookieParser())
 
 
 // app.use("/",express.static(path.join(__dirname,"public")))
-app.get("/", (req, res) => res.send("Express on Vercel"));
+app.get("/", (req, res) => res.send("Exp"));
 //app.use("/",router)
  app.use("/api/auth", authRoutes);
  app.use("/api/products", productRoutes);
