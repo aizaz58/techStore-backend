@@ -35,8 +35,9 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cookieParser())
 
 
-app.use("/",express.static(path.join(__dirname,"public")))
-app.use("/",router)
+// app.use("/",express.static(path.join(__dirname,"public")))
+app.get("/", (req, res) => res.send("Express on Vercel"));
+//app.use("/",router)
  app.use("/api/auth", authRoutes);
  app.use("/api/products", productRoutes);
  app.use("/api/cart", cartRoutes);
